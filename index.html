@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aakara Icons - CSS Icon Library</title>
+    <link rel="stylesheet" href="css/svg.css">
+    <link rel="stylesheet" href="css/svg-color.css">
+    <link rel="stylesheet" href="css/showcase.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        // Prevent flash of wrong theme
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <!-- Sticky Header with Title, Tabs and Theme Toggle -->
+    <header class="sticky-header">
+        <div class="header-content">
+            <div class="header-brand">
+                <aakara-icon large gold hover-spin></aakara-icon>
+                <span class="header-title">Aakara Icons</span>
+            </div>
+            <nav class="tabs-nav">
+                <button class="tab-btn active" data-tab="icons">
+                    <layers-icon></layers-icon>
+                    <span>Icons</span>
+                    <span class="tab-badge">100+</span>
+                </button>
+                <button class="tab-btn" data-tab="help">
+                    <info-icon></info-icon>
+                    <span>How to Use</span>
+                </button>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <sun-icon class="sun-icon"></sun-icon>
+                <moon-icon class="moon-icon"></moon-icon>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <aakara-icon xl-7 gold hover-spin></aakara-icon>
+            <h1>Aakara Icons</h1>
+            <p class="tagline">Pure CSS icon library using mask-image technique</p>
+            <p class="description">100+ scalable icons that inherit color from <code>currentColor</code>. No JavaScript, no font files, just CSS.</p>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!-- Help Tab -->
+        <div class="tab-content" id="help-tab">
+            <!-- Usage Section -->
+            <section class="usage-section">
+                <h2>Getting Started</h2>
+            <div class="code-block">
+                <pre><code>&lt;!-- Include the CSS --&gt;
+&lt;link rel="stylesheet" href="svg.css"&gt;
+
+&lt;!-- Use any icon as a custom HTML tag --&gt;
+&lt;menu-icon&gt;&lt;/menu-icon&gt;
+&lt;search-icon&gt;&lt;/search-icon&gt;
+&lt;heart-icon&gt;&lt;/heart-icon&gt;</code></pre>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <check-icon></check-icon>
+                    <span>Inherits text color</span>
+                </div>
+                <div class="feature">
+                    <check-icon></check-icon>
+                    <span>Scalable with CSS</span>
+                </div>
+                <div class="feature">
+                    <check-icon></check-icon>
+                    <span>No dependencies</span>
+                </div>
+                <div class="feature">
+                    <check-icon></check-icon>
+                    <span>Attribute modifiers</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attribute Modifiers -->
+        <section class="usage-section modifiers-section">
+            <h2>Attribute Modifiers</h2>
+            <p class="section-desc">Style icons directly with HTML attributes - no classes needed!</p>
+            
+            <div class="modifier-group">
+                <h3>Sizes</h3>
+                <div class="modifier-demo">
+                    <div class="modifier-item">
+                        <heart-icon tiny></heart-icon>
+                        <code>tiny</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-icon xs></heart-icon>
+                        <code>xs</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-icon small></heart-icon>
+                        <code>small</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-icon></heart-icon>
+                        <code>default</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-icon large></heart-icon>
+                        <code>large</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-icon xl></heart-icon>
+                        <code>xl</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-icon xxl></heart-icon>
+                        <code>xxl</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-icon huge></heart-icon>
+                        <code>huge</code>
+                    </div>
+                </div>
+                <div class="code-block">
+                    <pre><code>&lt;heart-icon tiny&gt;&lt;/heart-icon&gt;   &lt;!-- 12px --&gt;
+&lt;heart-icon xs&gt;&lt;/heart-icon&gt;     &lt;!-- 14px --&gt;
+&lt;heart-icon small&gt;&lt;/heart-icon&gt;  &lt;!-- 16px (also: sm) --&gt;
+&lt;heart-icon medium&gt;&lt;/heart-icon&gt; &lt;!-- 20px (also: md) --&gt;
+&lt;heart-icon large&gt;&lt;/heart-icon&gt;  &lt;!-- 28px (also: lg) --&gt;
+&lt;heart-icon xl&gt;&lt;/heart-icon&gt;     &lt;!-- 32px --&gt;
+&lt;heart-icon xxl&gt;&lt;/heart-icon&gt;    &lt;!-- 40px (also: 2xl) --&gt;
+&lt;heart-icon huge&gt;&lt;/heart-icon&gt;   &lt;!-- 64px (also: 4xl) --&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="modifier-group">
+                <h3>Colors</h3>
+                <div class="modifier-demo colors-demo">
+                    <div class="modifier-item">
+                        <star-icon red large></star-icon>
+                        <code>red</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-icon orange large></star-icon>
+                        <code>orange</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-icon yellow large></star-icon>
+                        <code>yellow</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-icon green large></star-icon>
+                        <code>green</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-icon cyan large></star-icon>
+                        <code>cyan</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-icon blue large></star-icon>
+                        <code>blue</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-icon purple large></star-icon>
+                        <code>purple</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-icon pink large></star-icon>
+                        <code>pink</code>
+                    </div>
+                </div>
+                <div class="modifier-demo colors-demo">
+                    <div class="modifier-item">
+                        <check-icon success large></check-icon>
+                        <code>success</code>
+                    </div>
+                    <div class="modifier-item">
+                        <warning-icon warning large></warning-icon>
+                        <code>warning</code>
+                    </div>
+                    <div class="modifier-item">
+                        <error-icon danger large></error-icon>
+                        <code>danger</code>
+                    </div>
+                    <div class="modifier-item">
+                        <info-icon info large></info-icon>
+                        <code>info</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-icon primary large></star-icon>
+                        <code>primary</code>
+                    </div>
+                </div>
+                <div class="code-block">
+                    <pre><code>&lt;!-- Basic Colors --&gt;
+&lt;star-icon red&gt;&lt;/star-icon&gt;
+&lt;star-icon orange&gt;&lt;/star-icon&gt;
+&lt;star-icon green&gt;&lt;/star-icon&gt;
+&lt;star-icon blue&gt;&lt;/star-icon&gt;
+&lt;star-icon purple&gt;&lt;/star-icon&gt;
+&lt;star-icon pink&gt;&lt;/star-icon&gt;
+
+&lt;!-- Semantic Colors --&gt;
+&lt;check-icon success&gt;&lt;/check-icon&gt;
+&lt;warning-icon warning&gt;&lt;/warning-icon&gt;
+&lt;error-icon danger&gt;&lt;/error-icon&gt;
+&lt;info-icon info&gt;&lt;/info-icon&gt;
+
+&lt;!-- Brand Colors --&gt;
+&lt;facebook-icon facebook&gt;&lt;/facebook-icon&gt;
+&lt;twitter-icon twitter&gt;&lt;/twitter-icon&gt;
+&lt;youtube-icon youtube&gt;&lt;/youtube-icon&gt;
+&lt;whatsapp-icon whatsapp&gt;&lt;/whatsapp-icon&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="modifier-group">
+                <h3>Brand Colors</h3>
+                <div class="modifier-demo colors-demo">
+                    <div class="modifier-item">
+                        <facebook-icon facebook large></facebook-icon>
+                        <code>facebook</code>
+                    </div>
+                    <div class="modifier-item">
+                        <twitter-icon twitter large></twitter-icon>
+                        <code>twitter</code>
+                    </div>
+                    <div class="modifier-item">
+                        <instagram-icon instagram large></instagram-icon>
+                        <code>instagram</code>
+                    </div>
+                    <div class="modifier-item">
+                        <youtube-icon youtube large></youtube-icon>
+                        <code>youtube</code>
+                    </div>
+                    <div class="modifier-item">
+                        <whatsapp-icon whatsapp large></whatsapp-icon>
+                        <code>whatsapp</code>
+                    </div>
+                    <div class="modifier-item">
+                        <discord-icon discord large></discord-icon>
+                        <code>discord</code>
+                    </div>
+                    <div class="modifier-item">
+                        <spotify-icon spotify large></spotify-icon>
+                        <code>spotify</code>
+                    </div>
+                    <div class="modifier-item">
+                        <github-icon github large></github-icon>
+                        <code>github</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modifier-group">
+                <h3>Gradients</h3>
+                <p class="modifier-desc">Use gradient icons for multicolor effects (requires svg-color.css)</p>
+                <div class="modifier-demo colors-demo">
+                    <div class="modifier-item">
+                        <heart-gradient large></heart-gradient>
+                        <code>heart-gradient</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-gradient large></star-gradient>
+                        <code>star-gradient</code>
+                    </div>
+                    <div class="modifier-item">
+                        <sparkle-gradient large></sparkle-gradient>
+                        <code>sparkle-gradient</code>
+                    </div>
+                    <div class="modifier-item">
+                        <bolt-gradient large></bolt-gradient>
+                        <code>bolt-gradient</code>
+                    </div>
+                    <div class="modifier-item">
+                        <instagram-gradient large></instagram-gradient>
+                        <code>instagram-gradient</code>
+                    </div>
+                </div>
+                <p class="modifier-desc" style="margin-top: 1rem;">Apply gradient presets to any gradient icon:</p>
+                <div class="modifier-demo colors-demo">
+                    <div class="modifier-item">
+                        <heart-gradient sunset large></heart-gradient>
+                        <code>sunset</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-gradient ocean large></heart-gradient>
+                        <code>ocean</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-gradient aurora large></heart-gradient>
+                        <code>aurora</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-gradient candy large></heart-gradient>
+                        <code>candy</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-gradient neon large></heart-gradient>
+                        <code>neon</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-gradient rainbow large></heart-gradient>
+                        <code>rainbow</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-gradient gold large></star-gradient>
+                        <code>gold</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-gradient holo large></star-gradient>
+                        <code>holo</code>
+                    </div>
+                </div>
+                <div class="code-block">
+                    <pre><code>&lt;!-- Include svg-color.css for gradients --&gt;
+&lt;link rel="stylesheet" href="svg-color.css"&gt;
+
+&lt;!-- Use gradient icon variants --&gt;
+&lt;heart-gradient&gt;&lt;/heart-gradient&gt;
+&lt;star-gradient&gt;&lt;/star-gradient&gt;
+&lt;instagram-gradient&gt;&lt;/instagram-gradient&gt;
+
+&lt;!-- Apply gradient presets --&gt;
+&lt;heart-gradient sunset&gt;&lt;/heart-gradient&gt;
+&lt;heart-gradient ocean&gt;&lt;/heart-gradient&gt;
+&lt;heart-gradient rainbow&gt;&lt;/heart-gradient&gt;
+&lt;star-gradient gold&gt;&lt;/star-gradient&gt;
+&lt;star-gradient holo&gt;&lt;/star-gradient&gt;
+
+&lt;!-- With size and effects --&gt;
+&lt;heart-gradient sunset xl glow&gt;&lt;/heart-gradient&gt;
+&lt;sparkle-gradient aurora huge&gt;&lt;/sparkle-gradient&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="modifier-group">
+                <h3>Animations</h3>
+                <div class="modifier-demo">
+                    <div class="modifier-item">
+                        <refresh-icon spin xl blue></refresh-icon>
+                        <code>spin</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-icon pulse xl red></heart-icon>
+                        <code>pulse</code>
+                    </div>
+                    <div class="modifier-item">
+                        <bell-icon bounce xl yellow></bell-icon>
+                        <code>bounce</code>
+                    </div>
+                    <div class="modifier-item">
+                        <warning-icon shake xl orange></warning-icon>
+                        <code>shake</code>
+                    </div>
+                </div>
+                <div class="code-block">
+                    <pre><code>&lt;refresh-icon spin blue&gt;&lt;/refresh-icon&gt;  &lt;!-- Spinning loader --&gt;
+&lt;heart-icon pulse red&gt;&lt;/heart-icon&gt;      &lt;!-- Pulsing heart --&gt;
+&lt;bell-icon bounce yellow&gt;&lt;/bell-icon&gt;    &lt;!-- Bouncing notification --&gt;
+&lt;warning-icon shake orange&gt;&lt;/warning-icon&gt; &lt;!-- Shaking alert --&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="modifier-group">
+                <h3>Transforms & Effects</h3>
+                <div class="modifier-demo">
+                    <div class="modifier-item">
+                        <chevron-right xl></chevron-right>
+                        <code>normal</code>
+                    </div>
+                    <div class="modifier-item">
+                        <chevron-right flip-h xl></chevron-right>
+                        <code>flip-h</code>
+                    </div>
+                    <div class="modifier-item">
+                        <chevron-right flip-v xl></chevron-right>
+                        <code>flip-v</code>
+                    </div>
+                    <div class="modifier-item">
+                        <chevron-right rotate-90 xl></chevron-right>
+                        <code>rotate-90</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-icon xl></star-icon>
+                        <code>normal</code>
+                    </div>
+                    <div class="modifier-item">
+                        <star-icon faded xl></star-icon>
+                        <code>faded</code>
+                    </div>
+                </div>
+                <div class="code-block">
+                    <pre><code>&lt;!-- Flip & Rotate --&gt;
+&lt;chevron-right flip-h&gt;&lt;/chevron-right&gt;   &lt;!-- Horizontal flip --&gt;
+&lt;chevron-right flip-v&gt;&lt;/chevron-right&gt;   &lt;!-- Vertical flip --&gt;
+&lt;arrow-up rotate-90&gt;&lt;/arrow-up&gt;          &lt;!-- 90° rotation --&gt;
+&lt;arrow-up rotate-180&gt;&lt;/arrow-up&gt;         &lt;!-- 180° rotation --&gt;
+
+&lt;!-- Opacity --&gt;
+&lt;star-icon faded&gt;&lt;/star-icon&gt;            &lt;!-- 50% opacity --&gt;
+&lt;star-icon semi&gt;&lt;/star-icon&gt;             &lt;!-- 75% opacity --&gt;
+
+&lt;!-- Hover Effects --&gt;
+&lt;heart-icon hover-grow&gt;&lt;/heart-icon&gt;     &lt;!-- Grows on hover --&gt;
+&lt;settings-icon hover-spin&gt;&lt;/settings-icon&gt; &lt;!-- Spins on hover --&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="modifier-group">
+                <h3>Combining Attributes</h3>
+                <div class="modifier-demo">
+                    <div class="modifier-item">
+                        <send-icon red large></send-icon>
+                        <code>red large</code>
+                    </div>
+                    <div class="modifier-item">
+                        <heart-icon pink xl pulse></heart-icon>
+                        <code>pink xl pulse</code>
+                    </div>
+                    <div class="modifier-item">
+                        <refresh-icon blue xxl spin></refresh-icon>
+                        <code>blue xxl spin</code>
+                    </div>
+                    <div class="modifier-item">
+                        <settings-icon gray large hover-spin></settings-icon>
+                        <code>gray large hover-spin</code>
+                    </div>
+                </div>
+                <div class="code-block">
+                    <pre><code>&lt;!-- Combine multiple attributes --&gt;
+&lt;send-icon red large&gt;&lt;/send-icon&gt;
+&lt;heart-icon pink xl pulse&gt;&lt;/heart-icon&gt;
+&lt;refresh-icon blue xxl spin&gt;&lt;/refresh-icon&gt;
+&lt;settings-icon gray large hover-spin&gt;&lt;/settings-icon&gt;
+&lt;star-icon yellow huge rotate-90 faded&gt;&lt;/star-icon&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customization Examples -->
+        <section class="examples-section">
+            <h2>Customization Examples</h2>
+            
+            <div class="example-group">
+                <h3>Sizes</h3>
+                <div class="example-row">
+                    <div class="example-item">
+                        <heart-icon class="icon-xs"></heart-icon>
+                        <span>16px</span>
+                    </div>
+                    <div class="example-item">
+                        <heart-icon class="icon-sm"></heart-icon>
+                        <span>20px</span>
+                    </div>
+                    <div class="example-item">
+                        <heart-icon></heart-icon>
+                        <span>24px</span>
+                    </div>
+                    <div class="example-item">
+                        <heart-icon class="icon-lg"></heart-icon>
+                        <span>32px</span>
+                    </div>
+                    <div class="example-item">
+                        <heart-icon class="icon-xl"></heart-icon>
+                        <span>48px</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-group">
+                <h3>With Buttons</h3>
+                <div class="example-row buttons-row">
+                    <button class="btn btn-primary">
+                        <download></download>
+                        Download
+                    </button>
+                    <button class="btn btn-secondary">
+                        <settings-icon></settings-icon>
+                        Settings
+                    </button>
+                    <button class="btn btn-outline">
+                        <share-icon></share-icon>
+                        Share
+                    </button>
+                    <button class="btn btn-icon">
+                        <heart-icon></heart-icon>
+                    </button>
+                </div>
+            </div>
+
+            <div class="example-group">
+                <h3>Navigation Example</h3>
+                <nav class="example-nav">
+                    <a href="#" class="nav-item active">
+                        <home-icon></home-icon>
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <search-icon></search-icon>
+                        <span>Search</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <bell-icon></bell-icon>
+                        <span>Notifications</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <user-icon></user-icon>
+                        <span>Profile</span>
+                    </a>
+                </nav>
+            </div>
+        </section>
+        </div><!-- End Help Tab -->
+
+        <!-- Icons Tab -->
+        <div class="tab-content active" id="icons-tab">
+        <!-- Navigation & Actions -->
+        <section class="icon-section">
+            <h2>
+                <span class="section-number">01</span>
+                Navigation & Actions
+            </h2>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><menu-icon></menu-icon></div>
+                    <span class="icon-name">menu-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><search-icon></search-icon></div>
+                    <span class="icon-name">search-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><home-icon></home-icon></div>
+                    <span class="icon-name">home-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><settings-icon></settings-icon></div>
+                    <span class="icon-name">settings-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><close-icon></close-icon></div>
+                    <span class="icon-name">close-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><download></download></div>
+                    <span class="icon-name">download</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><upload-icon></upload-icon></div>
+                    <span class="icon-name">upload-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><edit-icon></edit-icon></div>
+                    <span class="icon-name">edit-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><delete-icon></delete-icon></div>
+                    <span class="icon-name">delete-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><share-icon></share-icon></div>
+                    <span class="icon-name">share-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><link-icon></link-icon></div>
+                    <span class="icon-name">link-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><external-link></external-link></div>
+                    <span class="icon-name">external-link</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><refresh-icon></refresh-icon></div>
+                    <span class="icon-name">refresh-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><plus-icon></plus-icon></div>
+                    <span class="icon-name">plus-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><minus-icon></minus-icon></div>
+                    <span class="icon-name">minus-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><copy-icon></copy-icon></div>
+                    <span class="icon-name">copy-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><save-icon></save-icon></div>
+                    <span class="icon-name">save-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><print-icon></print-icon></div>
+                    <span class="icon-name">print-icon</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status & Indicators -->
+        <section class="icon-section">
+            <h2>
+                <span class="section-number">02</span>
+                Status & Indicators
+            </h2>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><check-icon></check-icon></div>
+                    <span class="icon-name">check-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><error-icon></error-icon></div>
+                    <span class="icon-name">error-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><warning-icon></warning-icon></div>
+                    <span class="icon-name">warning-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><info-icon></info-icon></div>
+                    <span class="icon-name">info-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-icon></heart-icon></div>
+                    <span class="icon-name">heart-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><star-icon></star-icon></div>
+                    <span class="icon-name">star-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><bookmark-icon></bookmark-icon></div>
+                    <span class="icon-name">bookmark-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><bell-icon></bell-icon></div>
+                    <span class="icon-name">bell-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><eye-icon></eye-icon></div>
+                    <span class="icon-name">eye-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><eye-off-icon></eye-off-icon></div>
+                    <span class="icon-name">eye-off-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><lock-icon></lock-icon></div>
+                    <span class="icon-name">lock-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><unlock-icon></unlock-icon></div>
+                    <span class="icon-name">unlock-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><user-icon></user-icon></div>
+                    <span class="icon-name">user-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><mail-icon></mail-icon></div>
+                    <span class="icon-name">mail-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><phone-icon></phone-icon></div>
+                    <span class="icon-name">phone-icon</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Directions & Arrows -->
+        <section class="icon-section">
+            <h2>
+                <span class="section-number">03</span>
+                Directions & Arrows
+            </h2>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><arrow-up></arrow-up></div>
+                    <span class="icon-name">arrow-up</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><arrow-down></arrow-down></div>
+                    <span class="icon-name">arrow-down</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><arrow-left></arrow-left></div>
+                    <span class="icon-name">arrow-left</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><arrow-right></arrow-right></div>
+                    <span class="icon-name">arrow-right</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><chevron-up></chevron-up></div>
+                    <span class="icon-name">chevron-up</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><chevron-down></chevron-down></div>
+                    <span class="icon-name">chevron-down</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><chevron-left></chevron-left></div>
+                    <span class="icon-name">chevron-left</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><chevron-right></chevron-right></div>
+                    <span class="icon-name">chevron-right</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><expand-icon></expand-icon></div>
+                    <span class="icon-name">expand-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><collapse-icon></collapse-icon></div>
+                    <span class="icon-name">collapse-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><double-arrow-left></double-arrow-left></div>
+                    <span class="icon-name">double-arrow-left</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><double-arrow-right></double-arrow-right></div>
+                    <span class="icon-name">double-arrow-right</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI & Machine Learning -->
+        <section class="icon-section ai-section">
+            <h2>
+                <span class="section-number">04</span>
+                AI & Machine Learning
+            </h2>
+            
+            <h3 class="subsection-title">AI & Agents</h3>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><robot-icon></robot-icon></div>
+                    <span class="icon-name">robot-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><brain-icon></brain-icon></div>
+                    <span class="icon-name">brain-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><sparkle-icon></sparkle-icon></div>
+                    <span class="icon-name">sparkle-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><wand-icon></wand-icon></div>
+                    <span class="icon-name">wand-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><chat-bot-icon></chat-bot-icon></div>
+                    <span class="icon-name">chat-bot-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><lightbulb-icon></lightbulb-icon></div>
+                    <span class="icon-name">lightbulb-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><bolt-icon></bolt-icon></div>
+                    <span class="icon-name">bolt-icon</span>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Chat Interface</h3>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><new-chat-icon></new-chat-icon></div>
+                    <span class="icon-name">new-chat-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><new-file-icon></new-file-icon></div>
+                    <span class="icon-name">new-file-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><new-note-icon></new-note-icon></div>
+                    <span class="icon-name">new-note-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><chat-icon></chat-icon></div>
+                    <span class="icon-name">chat-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><message-icon></message-icon></div>
+                    <span class="icon-name">message-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><comment-icon></comment-icon></div>
+                    <span class="icon-name">comment-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><sidebar-icon></sidebar-icon></div>
+                    <span class="icon-name">sidebar-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><sidebar-left-icon></sidebar-left-icon></div>
+                    <span class="icon-name">sidebar-left-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><sidebar-right-icon></sidebar-right-icon></div>
+                    <span class="icon-name">sidebar-right-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><history-icon></history-icon></div>
+                    <span class="icon-name">history-icon</span>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Infrastructure</h3>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><chip-icon></chip-icon></div>
+                    <span class="icon-name">chip-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><cpu-icon></cpu-icon></div>
+                    <span class="icon-name">cpu-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><network-icon></network-icon></div>
+                    <span class="icon-name">network-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><layers-icon></layers-icon></div>
+                    <span class="icon-name">layers-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><data-icon></data-icon></div>
+                    <span class="icon-name">data-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><workflow-icon></workflow-icon></div>
+                    <span class="icon-name">workflow-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><code-icon></code-icon></div>
+                    <span class="icon-name">code-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><terminal-icon></terminal-icon></div>
+                    <span class="icon-name">terminal-icon</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media, Messengers & Email -->
+        <section class="icon-section social-section">
+            <h2>
+                <span class="section-number">05</span>
+                Social Media, Messengers & Email
+            </h2>
+            
+            <!-- Social Media Platforms -->
+            <h3 class="subsection-title">Social Platforms</h3>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><facebook-icon></facebook-icon></div>
+                    <span class="icon-name">facebook-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><twitter-icon></twitter-icon></div>
+                    <span class="icon-name">twitter-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><x-icon></x-icon></div>
+                    <span class="icon-name">x-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><instagram-icon></instagram-icon></div>
+                    <span class="icon-name">instagram-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><linkedin-icon></linkedin-icon></div>
+                    <span class="icon-name">linkedin-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><youtube-icon></youtube-icon></div>
+                    <span class="icon-name">youtube-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><tiktok-icon></tiktok-icon></div>
+                    <span class="icon-name">tiktok-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><reddit-icon></reddit-icon></div>
+                    <span class="icon-name">reddit-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><pinterest-icon></pinterest-icon></div>
+                    <span class="icon-name">pinterest-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><snapchat-icon></snapchat-icon></div>
+                    <span class="icon-name">snapchat-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><twitch-icon></twitch-icon></div>
+                    <span class="icon-name">twitch-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><spotify-icon></spotify-icon></div>
+                    <span class="icon-name">spotify-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><dribbble-icon></dribbble-icon></div>
+                    <span class="icon-name">dribbble-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><medium-icon></medium-icon></div>
+                    <span class="icon-name">medium-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><github-icon></github-icon></div>
+                    <span class="icon-name">github-icon</span>
+                </div>
+            </div>
+
+            <!-- Messengers -->
+            <h3 class="subsection-title">Messengers</h3>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><whatsapp-icon></whatsapp-icon></div>
+                    <span class="icon-name">whatsapp-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><telegram-icon></telegram-icon></div>
+                    <span class="icon-name">telegram-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><messenger-icon></messenger-icon></div>
+                    <span class="icon-name">messenger-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><discord-icon></discord-icon></div>
+                    <span class="icon-name">discord-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><slack-icon></slack-icon></div>
+                    <span class="icon-name">slack-icon</span>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <h3 class="subsection-title">Email & Communication</h3>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><gmail-icon></gmail-icon></div>
+                    <span class="icon-name">gmail-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><outlook-icon></outlook-icon></div>
+                    <span class="icon-name">outlook-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><mail-icon></mail-icon></div>
+                    <span class="icon-name">mail-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><inbox-icon></inbox-icon></div>
+                    <span class="icon-name">inbox-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><send-icon></send-icon></div>
+                    <span class="icon-name">send-icon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><at-icon></at-icon></div>
+                    <span class="icon-name">at-icon</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gradient Icons -->
+        <section class="icon-section gradient-section">
+            <h2>
+                <span class="section-number">06</span>
+                Gradient Icons
+            </h2>
+            <p class="section-desc">Multicolor gradient versions of popular icons with beautiful color effects.</p>
+            
+            <h3 class="subsection-title">Popular Gradients</h3>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-gradient large></heart-gradient></div>
+                    <span class="icon-name">heart-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><star-gradient large></star-gradient></div>
+                    <span class="icon-name">star-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><sparkle-gradient large></sparkle-gradient></div>
+                    <span class="icon-name">sparkle-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><bolt-gradient large></bolt-gradient></div>
+                    <span class="icon-name">bolt-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><fire-gradient large></fire-gradient></div>
+                    <span class="icon-name">fire-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><diamond-gradient large></diamond-gradient></div>
+                    <span class="icon-name">diamond-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><crown-gradient large></crown-gradient></div>
+                    <span class="icon-name">crown-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><rocket-gradient large></rocket-gradient></div>
+                    <span class="icon-name">rocket-gradient</span>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">AI & Tech</h3>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><brain-gradient large></brain-gradient></div>
+                    <span class="icon-name">brain-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><robot-gradient large></robot-gradient></div>
+                    <span class="icon-name">robot-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><wand-gradient large></wand-gradient></div>
+                    <span class="icon-name">wand-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><lightbulb-gradient large></lightbulb-gradient></div>
+                    <span class="icon-name">lightbulb-gradient</span>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Brand Gradients</h3>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><instagram-gradient large></instagram-gradient></div>
+                    <span class="icon-name">instagram-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><tiktok-gradient large></tiktok-gradient></div>
+                    <span class="icon-name">tiktok-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><messenger-gradient large></messenger-gradient></div>
+                    <span class="icon-name">messenger-gradient</span>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Creative</h3>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><music-gradient large></music-gradient></div>
+                    <span class="icon-name">music-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><camera-gradient large></camera-gradient></div>
+                    <span class="icon-name">camera-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><palette-gradient large></palette-gradient></div>
+                    <span class="icon-name">palette-gradient</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><globe-gradient large></globe-gradient></div>
+                    <span class="icon-name">globe-gradient</span>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Gradient Presets</h3>
+            <p class="section-desc">Apply these gradient attributes to any gradient icon</p>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-gradient sunset large></heart-gradient></div>
+                    <span class="icon-name">sunset</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-gradient ocean large></heart-gradient></div>
+                    <span class="icon-name">ocean</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-gradient aurora large></heart-gradient></div>
+                    <span class="icon-name">aurora</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-gradient fire large></heart-gradient></div>
+                    <span class="icon-name">fire</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-gradient forest large></heart-gradient></div>
+                    <span class="icon-name">forest</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-gradient candy large></heart-gradient></div>
+                    <span class="icon-name">candy</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-gradient gold large></heart-gradient></div>
+                    <span class="icon-name">gold</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-gradient neon large></heart-gradient></div>
+                    <span class="icon-name">neon</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-gradient rainbow large></heart-gradient></div>
+                    <span class="icon-name">rainbow</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><star-gradient holo large></star-gradient></div>
+                    <span class="icon-name">holo (animated)</span>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Effects</h3>
+            <div class="icon-grid">
+                <div class="icon-card">
+                    <div class="icon-preview"><heart-gradient glow large></heart-gradient></div>
+                    <span class="icon-name">glow</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><star-gradient glow large></star-gradient></div>
+                    <span class="icon-name">glow</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><sparkle-gradient large></sparkle-gradient></div>
+                    <span class="icon-name">pulse (built-in)</span>
+                </div>
+                <div class="icon-card">
+                    <div class="icon-preview"><bolt-gradient glow large></bolt-gradient></div>
+                    <span class="icon-name">glow</span>
+                </div>
+            </div>
+        </section>
+        </div><!-- End Icons Tab -->
+    </main>
+
+    <footer class="footer">
+        <p><aakara-icon small></aakara-icon> Aakara Icons &mdash; Pure CSS Icon Library</p>
+    </footer>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to dark
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Tab switching functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active from all buttons and tab contents
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+                
+                // Add active to clicked button
+                btn.classList.add('active');
+                
+                // Show the selected tab
+                const tabId = btn.dataset.tab;
+                document.getElementById(tabId + '-tab').classList.add('active');
+            });
+        });
+
+        // Sticky header visibility on scroll
+        const stickyHeader = document.querySelector('.sticky-header');
+        const heroSection = document.querySelector('.hero');
+        
+        function handleScroll() {
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            
+            if (window.scrollY > heroBottom - 60) {
+                stickyHeader.classList.add('visible');
+            } else {
+                stickyHeader.classList.remove('visible');
+            }
+        }
+        
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // Check initial state
+    </script>
+</body>
+</html>
+
